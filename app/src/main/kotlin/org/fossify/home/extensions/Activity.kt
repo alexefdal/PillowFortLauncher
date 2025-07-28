@@ -101,8 +101,13 @@ fun Activity.handleGridItemPopupMenu(
             }
             it.iconTintList = ColorStateList.valueOf(color)
         }
-        menu.findItem(R.id.rename).isVisible =
-            (gridItem.type == ITEM_TYPE_ICON || gridItem.type == ITEM_TYPE_FOLDER) && !isOnAllAppsFragment
+        val renameItem = menu.findItem(R.id.rename)
+        renameItem.isVisible =
+            (gridItem.type == ITEM_TYPE_ICON || gridItem.type == ITEM_TYPE_FOLDER)
+        if (isOnAllAppsFragment) {
+            renameItem.title = getString(R.string.edit_tags)
+        }
+
         menu.findItem(R.id.hide_icon).isVisible =
             gridItem.type == ITEM_TYPE_ICON && isOnAllAppsFragment
         menu.findItem(R.id.resize).isVisible = gridItem.type == ITEM_TYPE_WIDGET

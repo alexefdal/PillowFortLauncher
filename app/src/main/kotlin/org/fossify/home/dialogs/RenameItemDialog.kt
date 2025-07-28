@@ -29,19 +29,28 @@ class RenameItemDialog(val activity: Activity, val item: HomeScreenGridItem, val
                         val tags = binding.editTags.text.toString()
                             .split(",")
                             .map { it.trim() }
-                        if (newTitle.isNotEmpty()) {
-                            ensureBackgroundThread {
+
+                        if (item.id != null && newTitle.isEmpty()) {
+                            activity.toast(org.fossify.commons.R.string.value_cannot_be_empty)
+                            return@setOnClickListener
+                        }
+
+                        ensureBackgroundThread {
+                            if (item.id != null) {
                                 val result = activity.homeScreenGridItemsDB.updateItemTitle(newTitle, item.id!!)
-                                if (result == 1) {
-                                    TagStorage.saveTags(activity, item.packageName, tags)
-                                    callback()
-                                    alertDialog.dismiss()
-                                } else {
-                                    activity.toast(org.fossify.commons.R.string.unknown_error_occurred)
+                                if (result != 1) {
+                                    activity.runOnUiThread {
+                                        activity.toast(org.fossify.commons.R.string.unknown_error_occurred)
+                                    }
+                                    return@ensureBackgroundThread
                                 }
                             }
-                        } else {
-                            activity.toast(org.fossify.commons.R.string.value_cannot_be_empty)
+
+                            TagStorage.saveTags(activity, item.packageName, tags)
+                            activity.runOnUiThread {
+                                callback()
+                                alertDialog.dismiss()
+                            }
                         }
                     }
                 }

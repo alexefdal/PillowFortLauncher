@@ -7,6 +7,7 @@ import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.home.databinding.DialogRenameItemBinding
 import org.fossify.home.extensions.homeScreenGridItemsDB
 import org.fossify.home.models.HomeScreenGridItem
+import org.fossify.home.helpers.TagStorage
 
 class RenameItemDialog(val activity: Activity, val item: HomeScreenGridItem, val callback: () -> Unit) {
 
@@ -14,6 +15,8 @@ class RenameItemDialog(val activity: Activity, val item: HomeScreenGridItem, val
         val binding = DialogRenameItemBinding.inflate(activity.layoutInflater)
         val view = binding.root
         binding.renameItemEdittext.setText(item.title)
+        val existingTags = TagStorage.getTags(activity, item.packageName)
+        binding.editTags.setText(existingTags.joinToString(", "))
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(org.fossify.commons.R.string.ok, null)
@@ -23,10 +26,14 @@ class RenameItemDialog(val activity: Activity, val item: HomeScreenGridItem, val
                     alertDialog.showKeyboard(binding.renameItemEdittext)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         val newTitle = binding.renameItemEdittext.value
+                        val tags = binding.editTags.text.toString()
+                            .split(",")
+                            .map { it.trim() }
                         if (newTitle.isNotEmpty()) {
                             ensureBackgroundThread {
                                 val result = activity.homeScreenGridItemsDB.updateItemTitle(newTitle, item.id!!)
                                 if (result == 1) {
+                                    TagStorage.saveTags(activity, item.packageName, tags)
                                     callback()
                                     alertDialog.dismiss()
                                 } else {

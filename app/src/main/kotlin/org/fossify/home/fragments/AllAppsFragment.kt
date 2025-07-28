@@ -25,6 +25,7 @@ import org.fossify.home.activities.MainActivity
 import org.fossify.home.adapters.LaunchersAdapter
 import org.fossify.home.databinding.AllAppsFragmentBinding
 import org.fossify.home.extensions.config
+import org.fossify.home.helpers.TagStorage
 import org.fossify.home.extensions.launchApp
 import org.fossify.home.extensions.setupDrawerBackground
 import org.fossify.home.helpers.ITEM_TYPE_ICON
@@ -240,8 +241,11 @@ class AllAppsFragment(
         binding.searchBar.setupMenu()
 
         binding.searchBar.onSearchTextChangedListener = { query ->
-            val filtered =
-                launchers.filter { query.isEmpty() || it.title.contains(query, ignoreCase = true) }
+            val filtered = launchers.filter { launcher ->
+                query.isEmpty() || launcher.title.contains(query, ignoreCase = true) ||
+                    TagStorage.getTags(requireContext(), launcher.packageName)
+                        .any { tag -> tag.contains(query, ignoreCase = true) }
+            }
             getAdapter()?.submitList(filtered) {
                 showNoResultsPlaceholderIfNeeded()
             }

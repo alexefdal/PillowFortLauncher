@@ -243,7 +243,7 @@ class AllAppsFragment(
         binding.searchBar.onSearchTextChangedListener = { query ->
             val filtered = launchers.filter { launcher ->
                 query.isEmpty() || launcher.title.contains(query, ignoreCase = true) ||
-                    TagStorage.getTags(context, launcher.packageName)
+                    TagStorage.getTags(requireContext(), launcher.packageName)
                         .any { tag -> tag.contains(query, ignoreCase = true) }
             }
             getAdapter()?.submitList(filtered) {

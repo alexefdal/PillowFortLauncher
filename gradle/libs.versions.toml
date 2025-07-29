@@ -8,7 +8,7 @@ detekt = "1.23.8"
 detektCompose = "0.4.25"
 #Room
 room = "2.7.2"
-#Fossify
+#PillowFort
 commons = "4.3.0"
 #Gradle
 gradlePlugins-agp = "8.11.1"
@@ -25,8 +25,8 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 #Compose
 compose-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
-#Fossify
-fossify-commons = { module = "org.fossify:commons", version.ref = "commons" }
+#PillowFort
+pillowfort-commons = { module = "org.pillowfort:commons", version.ref = "commons" }
 [bundles]
 room = [
     "androidx-room-ktx",

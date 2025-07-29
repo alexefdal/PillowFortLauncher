@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_margin">
 
-    <org.fossify.commons.views.MyTextInputLayout
+    <org.pillowfort.commons.views.MyTextInputLayout
         android:id="@+id/rename_item_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:inputType="textCapWords"
             android:textSize="@dimen/bigger_text_size" />
 
-    </org.fossify.commons.views.MyTextInputLayout>
+    </org.pillowfort.commons.views.MyTextInputLayout>
 
     <EditText
         android:id="@+id/edit_tags"

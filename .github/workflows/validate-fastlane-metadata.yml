@@ -12,4 +12,4 @@ on:
 
 jobs:
   validate:
-    uses: FossifyOrg/.github/.github/workflows/validate-fastlane-metadata.yml@main
+    uses: PillowFortOrg/.github/.github/workflows/validate-fastlane-metadata.yml@main

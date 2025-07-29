@@ -23,7 +23,7 @@
         android:required="false" />
 
     <application
-        android:name="org.fossify.commons.FossifyApp"
+        android:name="org.pillowfort.commons.PillowFortApp"
         android:allowBackup="true"
         android:appCategory="productivity"
         android:icon="@mipmap/ic_launcher"
@@ -72,13 +72,13 @@
         </activity>
 
         <activity
-            android:name="org.fossify.commons.activities.AboutActivity"
+            android:name="org.pillowfort.commons.activities.AboutActivity"
             android:exported="false"
             android:label="@string/about"
             android:parentActivityName=".activities.SettingsActivity" />
 
         <activity
-            android:name="org.fossify.commons.activities.CustomizationActivity"
+            android:name="org.pillowfort.commons.activities.CustomizationActivity"
             android:exported="false"
             android:label="@string/customize_colors"
             android:parentActivityName=".activities.SettingsActivity" />

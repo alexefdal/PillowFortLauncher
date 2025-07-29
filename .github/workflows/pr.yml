@@ -6,4 +6,4 @@ on:
 
 jobs:
     call-pr-workflow:
-        uses: FossifyOrg/.github/.github/workflows/pr.yml@main
+        uses: PillowFortOrg/.github/.github/workflows/pr.yml@main

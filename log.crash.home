@@ -1,7 +1,7 @@
 FATAL EXCEPTION: main
-                                                                                                    Process: org.fossify.home, PID: 9996
+                                                                                                    Process: org.pillowfort.home, PID: 9996
                                                                                                     java.lang.NullPointerException
-                                                                                                    	at org.fossify.home.views.HomeScreenGrid.o(Unknown Source:54)
+                                                                                                    	at org.pillowfort.home.views.HomeScreenGrid.o(Unknown Source:54)
                                                                                                     	at f3.c.s(Unknown Source:235)
                                                                                                     	at J1.a.l(Unknown Source:37)
                                                                                                     	at J1.a.p(Unknown Source:74)

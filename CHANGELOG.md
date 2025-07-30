@@ -58,23 +58,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[#5]: https://github.com/FossifyOrg/Launcher/issues/5
-[#6]: https://github.com/FossifyOrg/Launcher/issues/6
-[#44]: https://github.com/FossifyOrg/Launcher/issues/44
-[#51]: https://github.com/FossifyOrg/Launcher/issues/51
-[#63]: https://github.com/FossifyOrg/Launcher/issues/63
-[#65]: https://github.com/FossifyOrg/Launcher/issues/65
-[#74]: https://github.com/FossifyOrg/Launcher/issues/74
-[#106]: https://github.com/FossifyOrg/Launcher/issues/106
-[#115]: https://github.com/FossifyOrg/Launcher/issues/115
-[#182]: https://github.com/FossifyOrg/Launcher/issues/182
+[#5]: https://github.com/PillowFortOrg/Launcher/issues/5
+[#6]: https://github.com/PillowFortOrg/Launcher/issues/6
+[#44]: https://github.com/PillowFortOrg/Launcher/issues/44
+[#51]: https://github.com/PillowFortOrg/Launcher/issues/51
+[#63]: https://github.com/PillowFortOrg/Launcher/issues/63
+[#65]: https://github.com/PillowFortOrg/Launcher/issues/65
+[#74]: https://github.com/PillowFortOrg/Launcher/issues/74
+[#106]: https://github.com/PillowFortOrg/Launcher/issues/106
+[#115]: https://github.com/PillowFortOrg/Launcher/issues/115
+[#182]: https://github.com/PillowFortOrg/Launcher/issues/182
 
-[Unreleased]: https://github.com/FossifyOrg/Launcher/compare/1.2.0...HEAD
-[1.2.0]: https://github.com/FossifyOrg/Launcher/compare/1.1.4...1.2.0
-[1.1.4]: https://github.com/FossifyOrg/Launcher/compare/1.1.3...1.1.4
-[1.1.3]: https://github.com/FossifyOrg/Launcher/compare/1.1.2...1.1.3
-[1.1.2]: https://github.com/FossifyOrg/Launcher/compare/1.1.1...1.1.2
-[1.1.1]: https://github.com/FossifyOrg/Launcher/compare/1.1.0...1.1.1
-[1.1.0]: https://github.com/FossifyOrg/Launcher/compare/1.0.1...1.1.0
-[1.0.1]: https://github.com/FossifyOrg/Launcher/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/FossifyOrg/Launcher/releases/tag/1.0.0
+[Unreleased]: https://github.com/PillowFortOrg/Launcher/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/PillowFortOrg/Launcher/compare/1.1.4...1.2.0
+[1.1.4]: https://github.com/PillowFortOrg/Launcher/compare/1.1.3...1.1.4
+[1.1.3]: https://github.com/PillowFortOrg/Launcher/compare/1.1.2...1.1.3
+[1.1.2]: https://github.com/PillowFortOrg/Launcher/compare/1.1.1...1.1.2
+[1.1.1]: https://github.com/PillowFortOrg/Launcher/compare/1.1.0...1.1.1
+[1.1.0]: https://github.com/PillowFortOrg/Launcher/compare/1.0.1...1.1.0
+[1.0.1]: https://github.com/PillowFortOrg/Launcher/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/PillowFortOrg/Launcher/releases/tag/1.0.0

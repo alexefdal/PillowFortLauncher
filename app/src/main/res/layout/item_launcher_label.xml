@@ -10,7 +10,7 @@
     android:paddingEnd="@dimen/small_margin"
     android:paddingBottom="@dimen/small_margin">
 
-    <org.fossify.commons.views.MySquareImageView
+    <org.pillowfort.commons.views.MySquareImageView
         android:id="@+id/launcher_icon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/launcher_icon_size"
